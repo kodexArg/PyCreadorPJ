@@ -1,0 +1,30 @@
+
+    rasgos = pd.read_json(os.path.join(ct.STATIC_ROOT, 'rasgos.json'))
+    rasgo_aceptado = {}
+    d = 10
+    for i, row in rasgos.iteritems():
+        print(rasgos)
+
+        rasgo = i
+        habil_asociado = row[0]
+        atrib_asociado = row[1]
+
+        # debe tener las habilidades asociadas
+        if set(habil_asociado).issubset(set(list(habilidades.keys()))):
+            # mayor chance entre mayor su atributo asociado
+            if atributos[atrib_asociado] >= np.random.randint(5, d):
+                d += 2
+                rasgo_valor = max([habilidades[h] for h in habil_asociado]) + np.random.randint(0, 10)
+            
+                if caracter['sexo'] == "Mujer": #esto falla DRY, por lo menos lo hace sólo en aciertos
+                    rasgo = [w.replace('0', 'a') for w in rasgo]
+                    rasgo = [w.replace('1', 'a') for w in rasgo]
+                else:
+                    rasgo = [w.replace('0', 'o') for w in rasgo]
+                    rasgo = [w.replace('1', '') for w in rasgo]
+
+                rasgo_aceptado[''.join(rasgo)] =  rasgo_valor
+
+    r = sorted(rasgo_aceptado.items(), key=lambda x: x[1], reverse=True)
+    rasgos = {}
+    [ rasgos.update({k:v}) for k, v in r ]

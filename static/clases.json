@@ -1,0 +1,172 @@
+{
+    "Sin especialización": {
+        "FÍSICO": 0.13,
+        "ASTUCIA": 0.13,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.13,
+        "CARISMA": 0.13,
+        "EDUCACIÓN": 0.11
+    },
+    "Soldado": {
+        "FÍSICO": 0.18,
+        "ASTUCIA": 0.11,
+        "DESTREZA": 0.16,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.13,
+        "VOLUNTAD": 0.13,
+        "CARISMA": 0.09,
+        "EDUCACIÓN": 0.09
+    },
+    "Policía": {
+        "FÍSICO": 0.16,
+        "ASTUCIA": 0.13,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.16,
+        "VOLUNTAD": 0.11,
+        "CARISMA": 0.11,
+        "EDUCACIÓN": 0.09
+    },
+    "Médico": {
+        "FÍSICO": 0.11,
+        "ASTUCIA": 0.09,
+        "DESTREZA": 0.16,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.16,
+        "VOLUNTAD": 0.11,
+        "CARISMA": 0.11,
+        "EDUCACIÓN": 0.16
+    },
+    "Sacerdote": {
+        "FÍSICO": 0.09,
+        "ASTUCIA": 0.09,
+        "DESTREZA": 0.09,
+        "MAGIA": 0.13,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.2,
+        "CARISMA": 0.16,
+        "EDUCACIÓN": 0.13
+    },
+    "Cultista": {
+        "FÍSICO": 0.13,
+        "ASTUCIA": 0.13,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.16,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.16,
+        "CARISMA": 0.09,
+        "EDUCACIÓN": 0.09
+    },
+    "Técnico": {
+        "FÍSICO": 0.11,
+        "ASTUCIA": 0.11,
+        "DESTREZA": 0.16,
+        "MAGIA": 0.09,
+        "PERCEPCIÓN": 0.16,
+        "VOLUNTAD": 0.11,
+        "CARISMA": 0.09,
+        "EDUCACIÓN": 0.18
+    },
+    "Científico": {
+        "FÍSICO": 0.09,
+        "ASTUCIA": 0.11,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.09,
+        "PERCEPCIÓN": 0.16,
+        "VOLUNTAD": 0.13,
+        "CARISMA": 0.09,
+        "EDUCACIÓN": 0.2
+    },
+    "Bribón": {
+        "FÍSICO": 0.13,
+        "ASTUCIA": 0.2,
+        "DESTREZA": 0.16,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.09,
+        "CARISMA": 0.11,
+        "EDUCACIÓN": 0.09
+    },
+    "Charlatán": {
+        "FÍSICO": 0.11,
+        "ASTUCIA": 0.16,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.13,
+        "PERCEPCIÓN": 0.09,
+        "VOLUNTAD": 0.09,
+        "CARISMA": 0.16,
+        "EDUCACIÓN": 0.13
+    },
+    "Sicario": {
+        "FÍSICO": 0.11,
+        "ASTUCIA": 0.13,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.18,
+        "VOLUNTAD": 0.16,
+        "CARISMA": 0.09,
+        "EDUCACIÓN": 0.09
+    },
+    "Deportista": {
+        "FÍSICO": 0.18,
+        "ASTUCIA": 0.09,
+        "DESTREZA": 0.18,
+        "MAGIA": 0.09,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.13,
+        "CARISMA": 0.11,
+        "EDUCACIÓN": 0.11
+    },
+    "Líder": {
+        "FÍSICO": 0.11,
+        "ASTUCIA": 0.13,
+        "DESTREZA": 0.11,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.11,
+        "CARISMA": 0.18,
+        "EDUCACIÓN": 0.13
+    },
+    "Enfermero": {
+        "FÍSICO": 0.13,
+        "ASTUCIA": 0.13,
+        "DESTREZA": 0.16,
+        "MAGIA": 0.13,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.11,
+        "CARISMA": 0.11,
+        "EDUCACIÓN": 0.11
+    },
+    "Pandillero": {
+        "FÍSICO": 0.16,
+        "ASTUCIA": 0.16,
+        "DESTREZA": 0.16,
+        "MAGIA": 0.13,
+        "PERCEPCIÓN": 0.11,
+        "VOLUNTAD": 0.11,
+        "CARISMA": 0.09,
+        "EDUCACIÓN": 0.09
+    },
+    "Detective": {
+        "FÍSICO": 0.11,
+        "ASTUCIA": 0.16,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.18,
+        "VOLUNTAD": 0.11,
+        "CARISMA": 0.09,
+        "EDUCACIÓN": 0.11
+    },
+    "Artista": {
+        "FÍSICO": 0.13,
+        "ASTUCIA": 0.13,
+        "DESTREZA": 0.13,
+        "MAGIA": 0.11,
+        "PERCEPCIÓN": 0.09,
+        "VOLUNTAD": 0.09,
+        "CARISMA": 0.2,
+        "EDUCACIÓN": 0.11
+    }
+}

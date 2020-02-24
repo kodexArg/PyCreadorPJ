@@ -1,0 +1,197 @@
+{
+    "Estudioso Satanista": {
+        "H": {
+            "Ocultismo": 12,
+            "Religión": 10,
+            "Espiritismo": 8,
+            "Criptografía": 7,
+            "Sab. Académicos": 6
+            },
+        "A": "EDUCACIÓN",
+        "P": 5
+    },
+    "Mecánico": {
+        "H": {
+            "Mecánica": 12,
+            "Tecnología": 8,
+            "Conducir": 6
+        },
+        "A": "DESTREZA",
+        "P": 6
+    },
+    "Psiquiatra": {
+        "H": {
+            "Sanación": 10,
+            "Don de Gente": 8,
+            "Cotilleo-rumor": 8,
+            "Sab. Académicos": 12,
+            "Resistir el Mal": 10
+        },
+        "A": "EDUCACIÓN",
+        "P": 5
+    },
+    "Albañil": {
+        "H": {
+            "Fuerza Bruta": 14,
+            "Resistencia": 12,
+            "Trepar": 10
+        },
+        "A": "FÍSICO",
+        "P": 2
+    },
+    "Profesor1": {
+        "H": {
+            "Don de Gente": 10,
+            "Buscar-Investigar": 10,
+            "Concentración": 8,
+            "Escritura": 8,
+            "Sab. Académicos": 10
+        },
+        "A": "EDUCACIÓN",
+        "P": 9
+    },
+    "Maestr0 de Escuela": {
+        "Profesor": {
+            "H": {
+                "Don de Gente": 12,
+                "Escritura": 8,
+                "Sab. Académicos": 8
+            },
+            "A": "EDUCACIÓN",
+            "P": 6
+        }
+    },
+    "Cazarecompensas": {
+        "H":{
+            "Rastrear": 12,
+            "Buscar-Investigar": 8,
+            "Advertir-Notar": 10,
+            "Armas Pequeñas": 8,
+            "Armas Medianas": 8,
+            "Sexto Sentido": 6
+        },
+        "A": "PERCEPCIÓN",
+        "P": 5
+    },
+    "Francotirador1": {
+        "H": {
+            "Armas Precisión": 12,
+            "Rastrear": 10,
+            "Sigilo": 10
+        },
+        "A": "DESTREZA",
+        "P": 9
+    },
+    "Psicólog0": {
+        "H": {
+            "Don de Gente": 12,
+            "Sab. Académicos": 10,
+            "Resistir el Mal": 8
+        },
+        "A": "EDUCACIÓN",
+        "P": 5
+    },
+    "Boxeador1": {
+        "H": {
+            "Lucha": 12,
+            "Fuerza Bruta": 12,
+            "Esquivar": 10,
+            "Resistir el Dolor": 10
+        },
+        "A": "FÍSICO",
+        "P": 5
+    },
+    "Karateca": {
+        "H": {
+            "Lucha": 12,
+            "Esquivar": 12,
+            "Resistir el Dolor": 8
+        },
+        "A": "DESTREZA",
+        "P": 5
+    },
+    "Medium": {
+        "H": {
+            "Espiritismo": 14,
+            "Ocultistmo": 8,
+            "Resistir el Mal": 10
+        },
+        "A": "MAGIA",
+        "P": 5
+    },
+    "Detective paranormal": {
+        "H": {
+            "Sexto Sentido": 10,
+            "Ocultistmo": 8,
+            "Espiritismo": 8,
+            "Resistir el Mal": 10,
+            "Coraje": 10
+        },
+        "A": "EDUCACIÓN",
+        "P": 5
+    },
+    "Vidente": {
+        "H": {
+            "Sexto Sentido": 10,
+            "Ocultistmo": 8,
+            "Espiritismo": 8,
+            "Vision Bruja": 10
+        },
+        "A": "MAGIA",
+        "P": 5
+    },
+    "Líder de masas": {
+        "H": {
+            "Don de Mando": 13,
+            "Don de Gente": 12,
+            "Coraje": 10
+        },
+        "A": "CARISMA",
+        "P": 5
+    },
+    "Alpinista": {
+        "H": {
+            "Trepar": 14,
+            "Resistencia": 10,
+            "Atletismo": 12,
+            "Coraje": 10
+        },
+        "A": "FÍSICO",
+        "P": 5
+    },
+    "Pistoler0": {
+        "H": {
+            "Armas Pequeñas": 15
+        },
+        "A": "DESTREZA",
+        "P": 4
+    },
+    "Predicador1": {
+        "H": {
+            "Don de Mando": 8,
+            "Don de Gente": 14,
+            "Religión": 12
+        },
+        "A": "CARISMA",
+        "P": 5
+    },
+    "Interrogador": {
+        "H": {
+            "Intimidar": 12,
+            "Advertir-Notar": 10,
+            "Buscar-Investigar": 10
+        },
+        "A": "VOLUNTAD",
+        "P": 5
+    },
+    "Paramédico": {
+        "H": {
+            "Sanación": 14,
+            "Coraje": 10,
+            "Atletismo": 10
+        },
+        "A": "EDUCACIÓN",
+        "P": 5
+    }
+
+}
