@@ -2,6 +2,20 @@ body {
     padding-top: 40px;
 }
 
+.card-columns{
+	display: flex;
+}
+
+.card{
+	margin: 0.25rem;
+	width: 15rem;
+}
+
+.card-body{
+	margin: 0;
+	padding: 0;
+}
+
 .navbar .navbar-brand{
 	color : #FFF;
 	font-weight: bolder;

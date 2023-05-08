@@ -1,19 +1,14 @@
-{% extends "bootstrap/base.html" %}
-<meta name="viewport" content="width=device-width, initial-scale=1">
+{% extends "base.html" %}
 
 {% block title %}
     Subordinación y Valor
 {% endblock %}
 
-{% block styles %}
-    {{ super() }}
-    <link href="/static/base_ryf.css" rel="stylesheet">
+{% block navbar %}
+    {# {% include 'barra-nav.html' %} #}
+    {% include 'barra-nav.html' %} 
 
 {% endblock %}
-
-{% block navbar %}
-    {% include 'barra-nav.html' %}
-{% endblock  %}
 
 {% block content %}
     {% if mapa %}
