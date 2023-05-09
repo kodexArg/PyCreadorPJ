@@ -9,11 +9,20 @@ body {
 .card{
 	margin: 0.25rem;
 	width: 15rem;
+	min-width: 15rem;
 }
 
 .card-body{
 	margin: 0;
 	padding: 0;
+}
+
+.card-generador{
+	z-index: 1;
+	position: absolute;
+	width: 22rem;
+	bottom: 1rem;
+	right: 1rem;
 }
 
 .navbar .navbar-brand{

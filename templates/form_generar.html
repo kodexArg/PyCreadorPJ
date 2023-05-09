@@ -1,0 +1,134 @@
+{# Refactor 2023: Card, floating, Sexo->Genero #}
+<div class="card card-generador">
+   <form method="GET" class="form" action="/generar">
+      <div class="form-group">
+         <div class="container">
+            <div cass="row">
+
+               {# Nombre y BIO opcional #}
+               <div class="input-group m-2" id="opciones2">
+                  <div class="input-group mb-1">
+                     <label for="opt_nombre" class="text-muted input-group-text ">Nombre</label>
+                     <input type="text" class="form-control " name="opt_nombre"
+                        value="{{ request.args.get('opt_nombre', '') | safe }}">
+                  </div>
+
+                  <div class="input-group mb-1">
+                     <label for="opt_apellido" class="text-muted input-group-text ">Apellido</label>
+                     <input type="text" class="form-control " name="opt_apellido"
+                        value="{{ request.args.get('opt_apellido', '') | safe }}">
+                  </div>
+
+                  <div class="input-group mb-1">
+                     <label for="opt_edad" class="text-muted input-group-text ">Edad</label>
+                     <input type="text" class="form-control " name="opt_edad"
+                        value="{{ request.args.get('opt_edad', '') | safe }}">
+                  </div>
+
+                  <div class="input-group mb-1">
+                     <label for="opt_trait" class="text-muted input-group-text ">Bio</label>
+                     <input type="text" class="form-control " name="opt_trait"
+                        value="{{ request.args.get('opt_trait', '') | safe }}">
+                  </div>
+
+                  <div class="input-group mb-1">
+                     <div class="d-flex flex-row justify-content-between w-100">
+                        <label class="text-muted input-group-text " for="poder">Poder</label>
+                        <input class="form-range flex-grow-1" name="poder" type="range" min="1" max="10" step="1"
+                           value="{{ request.args.get('poder', 4) | safe }}">
+                     </div>
+                  </div>
+               </div>
+
+               {# Selección de la Clase (y Subclase, default oculto)#}
+               <div class="input-group input-group m-1">
+                  <span class="input-group-text ">Clase: </span>
+                  <select name="clase" class="form-control">
+                     {% for o in opciones_clases %}
+                     <option value="{{ o }}" {% if request.args.get('clase')==o %}SELECTED{% endif %}>{{ o }}</option>
+                     {% endfor %}
+                  </select>
+               </div>
+               <div class="input-group m-1" id='clase2'>
+                  <span class="input-group-text">Sub</span>
+                  <select name="clase2" class="form-control">
+                     {% for o in opciones_clases %}
+                     <option value="{{ o }}" {% if request.args.get('clase2')==o %}SELECTED{% endif %}>{{ o }}</option>
+                     {% endfor %}
+                  </select>
+               </div>
+
+               {# Expresión de Género #}
+               <div class="input-group m-1">
+                  <span class="input-group-text ">Género: </span>
+                  <select name="Expresión de Género" class="form-control">
+                     <option value="Indeterminado" {% if request.args.get('genero')=='Indeterminado' %}SELECTED{% endif
+                        %}>
+                        Indeterminado
+                     </option>
+                     <option value="Femenino" {% if request.args.get('genero')=='Femenino' %}SELECTED{% endif %}>
+                        Femenino</option>
+                     <option value="Masculino" {% if request.args.get('genero')=='Masculino' %}SELECTED{% endif %}>
+                        Masculino
+                  </select>
+               </div>
+
+               {# Más opciones checkbox #}
+               <div class="btn-group-toggle" data-toggle="toggle" id="masopciones">
+                  <label class="btn btn-sm text-muted">
+                     <input type="checkbox" id="masopciones-check">
+                     Más Opciones
+                  </label>
+
+                  {# Selección de Multi-Clase #}
+                  <label class="btn btn-sm text-muted">
+                     <input type="checkbox" id="masclases-check">
+                     Multiclase
+                  </label>
+               </div>
+
+               {# Submit! #}
+               <div class="d-grid p-2">
+                  <input type="hidden" name="sel" value="Generar">
+                  <button class="btn btn-warning btn-sm btn-block" type="submit">Generar</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </form>
+</div>
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+
+   $(document).ready(function () {
+      var o2 = {% if request.args.get('opt_nombre') %}true{% else %}false{% endif %};
+      var c2 = {% if request.args.get('clase2') %}true{% else %} false{% endif %};
+
+   refrescar();
+   if (o2) {
+      $('#opciones2').show();
+   }
+   if (c2) {
+      $('#clase2').show();
+   }
+  });
+
+   $('#masclases').click(refrescar);
+   $('#masopciones').click(refrescar);
+
+   function refrescar() {
+      if ($('#masclases-check').is(':checked')) {
+         $('#clase2').show();
+      } else {
+         $('#clase2').hide();
+      }
+      if ($('#masopciones-check').is(':checked')) {
+         $('#opciones2').show();
+      } else {
+         $('#opciones2').hide();
+      }
+   };
+</script>
+{% endblock %}
