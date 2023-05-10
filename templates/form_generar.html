@@ -61,15 +61,17 @@
                {# Expresión de Género #}
                <div class="input-group m-1">
                   <span class="input-group-text ">Género: </span>
-                  <select name="Expresión de Género" class="form-control">
+                  <select name="genero" class="form-control">
                      <option value="Indeterminado" {% if request.args.get('genero')=='Indeterminado' %}SELECTED{% endif
                         %}>
                         Indeterminado
                      </option>
                      <option value="Femenino" {% if request.args.get('genero')=='Femenino' %}SELECTED{% endif %}>
-                        Femenino</option>
+                        Femenino
+                     </option>
                      <option value="Masculino" {% if request.args.get('genero')=='Masculino' %}SELECTED{% endif %}>
                         Masculino
+                     </option>
                   </select>
                </div>
 
@@ -104,7 +106,7 @@
 
    $(document).ready(function () {
       var o2 = {% if request.args.get('opt_nombre') %}true{% else %}false{% endif %};
-      var c2 = {% if request.args.get('clase2') %}true{% else %} false{% endif %};
+   var c2 = {% if request.args.get('clase2') %}true{% else %} false{% endif %};
 
    refrescar();
    if (o2) {

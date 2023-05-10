@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, redirect, url_for
 
 import constantes as ct
-import randomizadores as rnd
+import creador_personajes as rnd
 import rolls
 import os
 import pickle

@@ -3,12 +3,19 @@ import os
 import pandas as pd
 import numpy as np
 import json
-import random
-from collections import OrderedDict
-import pdb
 
 
 def randomizar_caracteristicas(caracter):
+    """
+    Se lee el archivo características.list, se seleccionan características
+    aleatorias (se tira d10 y si el numero es menor a POSIBILIDAD_TRAIT) y
+    se agrega la característica al diccionario.
+
+    caracter = {'opt_nombre': '', 'opt_apellido': '', 'opt_edad': '',
+    'opt_trait': '', 'poder': '4', 'clase': 'Sin esp..', 'clase2': 'Sin esp..',
+    'genero': 'Indeterminado', 'sel': 'Generar'}
+    """
+
     chances = ct.POSIBILIDAD_TRAIT
     with open(os.path.join(ct.STATIC_ROOT, "caracteristicas.list")) as f:
         lines = [line.strip("\n") for line in f]
@@ -20,17 +27,24 @@ def randomizar_caracteristicas(caracter):
 
     caracteristicas = {}
     indice = 0
+
     for test in c:
-        if caracter["sexo"] == "Mujer":
+        if caracter["genero"] == "Mujer":
             test = [w.replace("0", "a") for w in test]
             test = [w.replace("1", "a") for w in test]
-        else:
+
+        elif caracter["genero"] == "Hombre":
             test = [w.replace("0", "o") for w in test]
             test = [w.replace("1", "") for w in test]
 
+        else:
+            test = [w.replace("c0", "que") for w in test]
+            test = [w.replace("0", "e") for w in test]
+            test = [w.replace("1", "e") for w in test]
+
         if np.random.randint(1, 10) < chances:
             caracteristicas.update({indice: np.random.choice(test).strip()})
-            chances = chances * 0.8
+            chances = chances * 0.9
             indice += 1
 
     if caracter["opt_trait"]:
@@ -91,7 +105,7 @@ def randomizar_habilidades(caracter, atributos):
         .set_index("HABILIDAD")
         .sample(n=round((20 * (int(caracter["poder"]) / 40))))
     )
-    df_habilidades =df_habilidades.head(14)
+    df_habilidades = df_habilidades.head(14)
 
     # print(df_habilidades)
     # .sample(n=round((12*(int(caracter['poder'])/40))))
@@ -130,10 +144,14 @@ def randomizar_dinero(caracter):
 
 
 def randomizar_nombre(caracter):
-    if caracter["sexo"] == "Mujer":
+    if caracter["genero"] == "Mujer":
         nombres = pd.read_csv(os.path.join(ct.STATIC_ROOT, "spanish-names/mujeres.csv"))
-    else:
+    if caracter["genero"] == "Hombre":
         nombres = pd.read_csv(os.path.join(ct.STATIC_ROOT, "spanish-names/hombres.csv"))
+    else:
+        nombres_hombre = pd.read_csv(os.path.join(ct.STATIC_ROOT, "spanish-names/hombres.csv"))
+        nombres_mujer = pd.read_csv(os.path.join(ct.STATIC_ROOT, "spanish-names/mujeres.csv"))
+        nombres = pd.concat([nombres_hombre, nombres_mujer])
 
     apellidos = pd.read_csv(os.path.join(ct.STATIC_ROOT, "spanish-names/apellidos.csv"))
 
